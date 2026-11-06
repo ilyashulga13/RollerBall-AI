@@ -9,7 +9,7 @@ This project demonstrates training an AI agent using Unity ML-Agents and PyTorch
 - Python 3.10
 - PyTorch
 
-- ## Environment Setup
+## Environment Setup
 
 **Observations: 6**
 - 3 values: Direction to the target (vector).
@@ -24,13 +24,13 @@ This project demonstrates training an AI agent using Unity ML-Agents and PyTorch
 - `+5.0` — Agent touches the target cube (success).
 - `-1.0` — Agent falls off the platform.
 
-- ## Project Structure
+## Project Structure
 
 - `Assets/Scripts/RollerAgent.cs` — The agent's control script.
 - `results/Run1/RollerBall.onnx` — The trained neural network model (ready for inference in Unity).
 - `results/Run1/RollerBall/` — Training checkpoints and TensorBoard logs.
 
-- ## How to Train
+## How to Train
 
 1. Open the scene in the Unity Editor.
 2. Ensure the `Behavior Type` on the Agent is set to `Default`.
@@ -38,9 +38,9 @@ This project demonstrates training an AI agent using Unity ML-Agents and PyTorch
 
 4. py -3.10 -m mlagents.trainers.learn --run-id=Run1 --time-scale=10
 
-5. 4. Press Play in the Unity Editor to start training.
+5. Press Play in the Unity Editor to start training.
   
-   5. ## How to Run Inference (Test the Model)
+## How to Run Inference (Test the Model)
 
 1. In the Agent's Inspector, change `Behavior Type` to `Inference Only`.
 2. Drag and drop the `RollerBall.onnx` file into the `Model` field of the `Behavior Parameters` component.
